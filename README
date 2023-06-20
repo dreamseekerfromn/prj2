@@ -1,0 +1,37 @@
+Name: Sung Yi
+SSOID: sjy7rf
+project2
+Oct 5th 2016
+
+NAME
+loglib.c - a library for log 
+log.h - a header for the library
+master - a executable file that is created for testing IPCS. It will spawn children
+slave - a executalbe file that is created for testing IPCS. It will read & increment the number in the shared memory
+pcb.h - contain structure for the bakery algorithm
+
+DESCRIPTION
+a simple log library testing file
+
+-h
+will show the purpose of the file "test"
+
+-s [integer]
+set maximum number of processes to [integer]
+
+-i [integer]
+set maximum writing for slave to [integer]
+
+-l [filename]
+the output will be [filename]
+
+-t [integer]
+set timer for [integer] seconds to terminate master process
+
+Author
+Sung Yi
+
+Additional Note
+1. having problem to transfer argument to children. so just disabled switches in child processes. all parameters will be used w/ argv[] directly. (parent will use getopt_long)
+2. maximum of process for spawning is 18 (-s switch). b/c my pcb structure can contain only 18 processes 
+
